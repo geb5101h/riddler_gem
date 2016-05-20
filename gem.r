@@ -1,4 +1,6 @@
 library(magrittr)
+
+# likelihoods of the three gems
 a = 1 / 2
 b = 1 / 3
 c = 1 / 6
@@ -12,6 +14,7 @@ Ec = (b * 1  + a * (1 + (1 / b - 1) * a / (a + c))) / (1 - c)
 
 a * Ea + b * Eb + c * Ec
 
+#Simulate to verify.
 gemCountSim <- function() {
   vecCount = c(0,0,0)
   while (TRUE) {
